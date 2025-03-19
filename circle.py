@@ -32,4 +32,14 @@ class Circle:
         self.width
         )
 circle = Circle(blue,(300,300),25,0)
-circle.draw()
+
+while 1 :
+    for event in pygame.event.get():
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            screen.fill((255,255,255))
+            circle.draw()
+            pygame.display.update() 
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            screen.fill((255,255,255))
+            circle.grow()
+            pygame.display.update()
