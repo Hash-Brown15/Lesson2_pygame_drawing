@@ -2,10 +2,16 @@ import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((600,600))
-screen.fill(("white"))
-blue = "sky blue"
+
+blue = (64,237,234)
+red = (224,36,55)
+green = (72,214,56)
+white = (255,255,255)
+black = (0,0,0)
+yellow = (72,214,56)
 pygame.display.update()
 
+screen.fill(("white"))
 class Circle:
     def __init__(self,color,pos,radius,width):
         self.color = color
@@ -31,7 +37,12 @@ class Circle:
         self.radius,
         self.width
         )
-circle = Circle(blue,(300,300),25,0)
+position = (300,300)
+radius = 50
+width = 2
+pygame.draw.circle(screen,red,position,radius,width)
+pygame.display.update
+blueCircle = Circle(screen,blue,position,radius,width)
 
 while 1 :
     for event in pygame.event.get():
